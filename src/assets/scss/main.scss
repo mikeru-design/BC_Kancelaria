@@ -1,0 +1,34 @@
+body, html, *, *::before, *::after{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Great Vibes', cursive;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Cormorant Garamond', serif;
+    scroll-behavior: smooth !important;
+}
+
+@import 'settings';
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+section{
+    height: 100vh;
+}
+
+#aboutUs{
+    background-color: lightblue;
+}
+#team{
+    background-color: lightgreen;
+}
+#services{
+    background-color: lightyellow;
+}
+#contact{
+    background-color: lightcoral;
+}
+
