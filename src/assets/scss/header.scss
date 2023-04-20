@@ -6,12 +6,15 @@ header{
   height: 100vh;
   @include center;
   flex-flow: column nowrap;
-  margin-bottom: 50px;
+  background-image: url(../../../../images/warsaw_2e.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right 20% top 0%;
+  background-attachment: fixed;
   overflow: hidden;
 
   &::before{
       @include before(100vw, 65vh, auto, 0, 0, auto, null);
-      background-image: linear-gradient(#ffffff00 10%, white 80%);
       z-index: 1;
   }
 
@@ -31,13 +34,13 @@ header{
 
   .mainLogoText{
       position: absolute;
-      width: 90%;
-      max-width: 700px;
+      width: 80%;
       margin: 0 auto;
-      bottom: 13%;
+      bottom: 20%;
       opacity: 0;
 
       z-index: 3;
+      filter: drop-shadow(0px 0px 10px rgb(50, 50, 50));
 
       animation: fadeIn;
       animation-duration: 1s;
@@ -48,23 +51,16 @@ header{
 
   .imgWrapper{
     position: absolute;
-    width: 100vw;
-    height: 100vh;
+    width: 80%;
+    height: 400px;
+    left: 0;
+    bottom: 10%;
     overflow: hidden;
+    background-color: #fff;
+  }
 
-    &::after{
-        content:"";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        background-image: url(../../../../images/Tło3.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: right 20% top 0%;
-        background-attachment: fixed;
-        z-index: -1;
-    }
+  .showDesktop{
+    display: none;
   }
 }
 
@@ -81,6 +77,18 @@ header{
     .logoMark{
       bottom: 35%;
     }
+
+    .mainLogoText{
+      bottom: 15%;
+    }
+
+    .showDesktop{
+      display: block;
+    }
+
+    .showMobile{
+      display: none;
+    }
   }
 }
 
@@ -91,7 +99,7 @@ header{
       bottom: 35%;
     }
     .mainLogoText{
-      height: 18vh;
+      // height: 18vh;
     }
   }
 

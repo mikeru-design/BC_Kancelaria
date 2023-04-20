@@ -6,6 +6,10 @@ nav{
   width: 100vw;
   height: $nav-height;
   z-index: 100;
+
+  .showDesktop{
+      display: none;
+  }
 }
 
 .mobileMenu{
@@ -270,21 +274,14 @@ nav{
   transition-delay: .5s;
 }
 
-nav{
-  .showDesktop{
-      display: none;
-  }
-}
-
 @media (width > 992px) {
   nav{
-      .showDesktop{
-          display: flex;
-      }
-      .showMobile{
-          display: none;
-      }
+    .showDesktop{
+      display: flex;
+    }
+    .showMobile{
+      display: none;
+    }
   }
-
 }
 
