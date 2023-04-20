@@ -1,0 +1,98 @@
+@import 'settings';
+
+header{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  @include center;
+  flex-flow: column nowrap;
+  margin-bottom: 50px;
+  overflow: hidden;
+
+  &::before{
+      @include before(100vw, 65vh, auto, 0, 0, auto, null);
+      background-image: linear-gradient(#ffffff00 10%, white 80%);
+      z-index: 1;
+  }
+
+  .logoMark{
+    position: absolute;
+    width: 150px;
+    max-width: 35%;
+    bottom: 27%;
+    z-index: 2;
+    opacity: 0;
+
+    animation: scaleDownFadeIn;
+    animation-duration: 3s;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+  }
+
+  .mainLogoText{
+      position: absolute;
+      width: 90%;
+      max-width: 700px;
+      margin: 0 auto;
+      bottom: 13%;
+      opacity: 0;
+
+      z-index: 3;
+
+      animation: fadeIn;
+      animation-duration: 1s;
+      animation-delay: 2s;
+      animation-timing-function: linear;
+      animation-fill-mode: forwards;
+  }
+
+  .imgWrapper{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    &::after{
+        content:"";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        background-image: url(../../../../images/Tło3.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: right 20% top 0%;
+        background-attachment: fixed;
+        z-index: -1;
+    }
+  }
+}
+
+@media (width > 576px) {
+  header{
+    .logoMark{
+      bottom: 35%;
+    }
+  }
+}
+
+@media (width > 992px) {
+  header{
+    .logoMark{
+      bottom: 35%;
+    }
+  }
+}
+
+@media only screen and (orientation: landscape) {
+  header{
+    .logoMark{
+      height: 30vh;
+      bottom: 35%;
+    }
+    .mainLogoText{
+      height: 18vh;
+    }
+  }
+
+}
