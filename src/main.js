@@ -3,6 +3,7 @@ import './assets/scss/main.scss';
 import './assets/scss/navbar.scss';
 import './assets/scss/header.scss';
 import './assets/scss/aboutUs.scss';
+import './assets/scss/team.scss';
 
 import Navbar from './assets/js/navbar';
 import showOnScroll from './assets/js/showOnScroll';

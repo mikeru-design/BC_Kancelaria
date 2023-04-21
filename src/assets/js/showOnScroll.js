@@ -1,8 +1,13 @@
 export default function showOnScroll() {
 
   const showOnScrollElements = document.querySelectorAll('.showOnScrollElement');
-  const showPoint = 150;
+  let showPoint = '';
   const windowHeight = window.innerHeight;
+  if( window.matchMedia('(max-width < 992px)') ){
+    showPoint = 50;
+  } else {
+    showPoint = 150;
+  }
 
   showOnScrollElements.forEach( showOnScrollElement => {
 
