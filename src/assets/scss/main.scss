@@ -1,37 +1,139 @@
-@import 'settings';
+@import "settings";
 
-body, html, *, *::before, *::after{
-    position: relative;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Great Vibes', cursive;
-    font-family: 'Roboto', sans-serif;
-    font-family: 'Cormorant Garamond', serif;
-    scroll-behavior: smooth !important;
+body,
+html,
+*,
+*::before,
+*::after {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Great Vibes", cursive;
+  font-family: "Roboto", sans-serif;
+  font-family: "Cormorant Garamond", serif;
+  scroll-behavior: smooth !important;
 }
 
 ::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
-section{
-    height: 100vh;
+section {
+  min-height: 100vh;
 }
 
-#aboutUs{
-    background-color: lightblue;
+.heading {
+  position: relative;
+  @include center;
+  width: 100%;
+  text-align: center;
+  color: $dark-main-color;
+  padding: 2rem 0;
+  z-index: 2;
+
+  h2 {
+    display: inline-block;
+    font-family: "Cormorant Garamond";
+    margin-bottom: 0;
+    font-size: 2.5rem;
+    font-weight: 400;
+  }
+
+  span {
+    position: relative;
+    color: white;
+    font-size: 130%;
+    margin-right: 0.5rem;
+    font-family: "Great Vibes";
+
+    &::after {
+      @include before(57px, 130%, auto, auto, 7%, -20%, $main-color);
+      z-index: -1;
+    }
+
+    &::before {
+      @include before(50vw, 2px, auto, auto, 7%, 0%, $main-color);
+      z-index: -1;
+      transform: scaleX(0);
+      transform-origin: left;
+    }
+  }
+
+  &.showOnScroll span::before {
+    transform: scaleX(1);
+    transition: 1s;
+    transition-delay: 0.5s;
+  }
 }
 
-#team{
-    background-color: lightgreen;
+#team {
+  background-color: lightgreen;
 }
 
-#services{
-    background-color: lightyellow;
+#services {
+  background-color: lightyellow;
 }
 
-#contact{
-    background-color: lightcoral;
+#contact {
+  background-color: lightcoral;
 }
 
+@media (width > 765px) {
+  .heading {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    color: $dark-main-color;
+    padding: 5rem 0% 2rem;
+    display: flex;
+    z-index: 2;
+
+    h2 {
+      font-family: "Cormorant Garamond";
+      font-size: 3rem;
+      margin-left: 0;
+    }
+
+    span {
+      &::after {
+        @include before(70px, 130%, auto, auto, 7%, -20%, $main-color);
+        z-index: -1;
+      }
+      &::before {
+        @include before(20vw, 2px, auto, auto, 7%, 0%, $main-color);
+        z-index: -1;
+      }
+    }
+  }
+}
+
+@media (width > 992px) {
+  .heading {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    color: $dark-main-color;
+    padding: 5rem 0% 2rem;
+    display: flex;
+    z-index: 2;
+
+    h2 {
+      font-family: "Cormorant Garamond";
+      font-size: 3rem;
+      margin-left: 0;
+    }
+
+    span {
+      &::after {
+        @include before(70px, 130%, auto, auto, 7%, -20%, $main-color);
+        z-index: -1;
+      }
+
+      &::before {
+        @include before(20vw, 2px, auto, auto, 7%, 0%, $main-color);
+        z-index: -1;
+      }
+    }
+  }
+}
