@@ -6,11 +6,7 @@
 
   .heading {
     span {
-      margin-right: 1.5rem;
-
-      &::after {
-        @include before(170%, 130%, auto, auto, 7%, -8%, $main-color);
-      }
+      margin-right: 1.2rem;
     }
   }
 
@@ -192,57 +188,38 @@
 
 @media (width > 992px){
   #team{
-    @include center;
-    flex-flow: column wrap;
-    padding: 0;
-    align-items: start;
+    .textWrapper{
+      margin-top: -130px;
 
-    .heading{
-      width: 100%;
+      .titleName{
+        @include center;
+        flex-flow: column nowrap;
+        margin-top: 0;
+        margin: 0 auto;
+        margin-bottom: 20px;
 
-      span{
-        margin-right: 1.6rem;
+        h2{
+          display: inline-block;
+          width: 70%;
+          margin: 0 auto;
+          text-align: right;
+        }
+
+        .name{
+          font-size: 2.5rem;
+        }
+
+        .surname{
+          margin: auto;
+          font-size: 2.2rem;
+        }
+      }
+
+      .text::after{
+        width: 20px;
+        left: -50px;
       }
     }
 
-    .mainWrapper{
-      @include center;
-      align-items: start;
-    }
-
-    .wrapper{
-      width: 45%;
-    }
-
-    .wrapperMagda{
-      margin-top: 0;
-    }
-
-    .mainImgSolo{
-      width: 300px;
-      height: 300px;
-      margin: 0 auto;
-    }
-
-    .textWrapper{
-      height: 1000px;
-    }
-
-  }
-}
-
-@media ( width > 1200px ){
-  #team{
-    .textWrapper{
-      height: 850px;
-    }
-  }
-}
-
-@media ( width > 1400px ){
-  #team{
-    .textWrapper{
-      height: 750px;
-    }
   }
 }
