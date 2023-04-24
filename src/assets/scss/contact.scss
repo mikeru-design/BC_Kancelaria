@@ -1,0 +1,268 @@
+@import "settings";
+
+#contact {
+  .heading {
+    span {
+      margin-right: 1.3rem;
+
+      &::after {
+        @include before(120%, 140%, auto, auto, 7%, 13%, $main-color);
+      }
+
+      &::before {
+        left: 20%;
+      }
+    }
+  }
+
+  .textWrapper {
+    @include center;
+    flex-flow: column nowrap;
+    align-items: start;
+    width: 100%;
+    margin: 0;
+    padding: 5% 5%;
+
+    text-align: left;
+    background-color: darken($color: $dark-main-color, $amount: 10%);
+
+    .dataWrapper {
+      position: relative;
+      @include center;
+      flex-flow: column nowrap;
+      width: 100%;
+      margin-top: 100px;
+
+      border: 2px solid darken($color: $dark-main-color, $amount: 5%);
+      border-radius: 10px;
+      box-sizing: content-box;
+
+      &.showOnScroll {
+        .imgWrapper {
+          transform: translate(-50%, -70%);
+          opacity: 1;
+        }
+
+        .data {
+          svg {
+            transform: translate(50%, -50%) scale(1);
+          }
+
+          .mobile {
+            svg {
+              transform: translate(0, 0);
+            }
+          }
+
+          h3::before {
+            transform: translateX(50%) scale(1);
+          }
+        }
+
+        .office {
+          svg {
+            transform: translate(-50%, -50%) scale(1);
+          }
+        }
+      }
+    }
+
+    .imgWrapper {
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(-50%, -40%);
+      width: 110px;
+      height: 110px;
+
+      background-color: white;
+      border: 5px solid darken($color: $dark-main-color, $amount: 5%);
+      border-radius: 50%;
+      overflow: hidden;
+      opacity: 0;
+
+      transition: all 0.5s ease 0.5s;
+      z-index: 10;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      .magdaSolo{
+        width: 90%;
+        margin-left:  7%;
+      }
+    }
+
+    .data {
+      @include center;
+      flex-direction: column;
+      width: 100%;
+      min-height: 230px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      z-index: 2;
+
+      border-radius: 5px;
+
+      svg {
+        position: absolute;
+        width: 30px;
+        top: 0;
+        left: 20px;
+        transform: translate(50%, -50%) scale(0);
+
+        fill: white;
+        transition: all 0.5s ease 1s;
+        z-index: 5;
+      }
+
+      h3 {
+        width: 100%;
+        margin-top: 50px;
+        padding: 0;
+        margin-bottom: 1rem;
+        font-family: "Roboto";
+        font-size: 1.3rem;
+        font-weight: 400;
+        color: white;
+        text-align: center;
+
+        &::before {
+          @include before(50%, 2px, auto, auto, -0.5rem, 0, $light-main-color);
+          transform: translateX(50%) scale(0);
+          transform-origin: center;
+          transition: 0.5s;
+        }
+      }
+
+      a {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        margin: 0;
+
+        color: $light-main-color;
+        text-decoration: none;
+        font-family: "Roboto";
+        font-size: 1rem;
+        line-height: 2rem;
+      }
+
+      .mobile {
+        @include center;
+        margin-top: 10px;
+
+        font-size: 120%;
+        letter-spacing: 2px;
+
+        svg {
+          position: relative;
+          width: auto;
+          height: 1.2rem;
+          top: auto;
+          left: auto;
+          padding: 0;
+          margin: 0;
+          margin-right: 10px;
+          transform: translate(0, 0);
+
+          fill: $light-main-color;
+        }
+      }
+    }
+
+    .dataContact {
+      text-align: center;
+
+      .office {
+        svg {
+          left: 50%;
+          transform: translate(-50%, -50%) scale(0);
+        }
+
+        p {
+          color: $light-main-color;
+        }
+
+        h3 {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  .mapWrapper {
+    display: flex;
+    width: 100%;
+    height: 50vh;
+    margin: 0 auto;
+    padding: 20px 0;
+    z-index: 2;
+
+    iframe {
+      margin: 0 auto;
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.26);
+    }
+  }
+}
+
+@media (width > 765px) {
+  #contact {
+    .textWrapper {
+      flex-flow: row wrap;
+      justify-content: space-around;
+
+      .dataWrapper {
+        width: 47%;
+      }
+
+      .dataContact {
+        display: inline-block;
+        justify-self: center;
+      }
+    }
+  }
+}
+
+@media (width > 992px) {
+  #contact {
+    .textWrapper {
+      .dataWrapper {
+        width: 45%;
+      }
+
+      .data {
+        svg {
+          width: 40px;
+        }
+      }
+    }
+  }
+}
+
+@media (width > 1200px) {
+  #contact {
+    .textWrapper {
+      justify-content: space-between;
+      .dataWrapper {
+        width: 31%;
+      }
+
+      .data {
+        margin: 0;
+      }
+
+      .dataContact {
+      }
+
+      .mapWrapper {
+        margin-top: 50px;
+      }
+    }
+  }
+}

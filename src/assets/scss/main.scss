@@ -22,7 +22,6 @@ html{
 }
 
 section {
-  min-height: 100vh;
   padding: 50px 0 0;
 }
 
@@ -57,7 +56,7 @@ section {
     }
 
     &::before {
-      @include before(50vw, 2px, auto, auto, 7%, 0%, $main-color);
+      @include before(40vw, 2px, auto, auto, 7%, 0%, $main-color);
       z-index: -1;
       transform: scaleX(0);
       transform-origin: left;
@@ -100,10 +99,6 @@ section {
   }
 }
 
-#contact {
-  background-color: lightcoral;
-}
-
 @media (width > 765px) {
   .heading {
     position: relative;
@@ -126,7 +121,7 @@ section {
         z-index: -1;
       }
       &::before {
-        @include before(20vw, 2px, auto, auto, 7%, 0%, $main-color);
+        @include before(30vw, 2px, auto, auto, 7%, 0%, $main-color);
         z-index: -1;
       }
     }
@@ -152,11 +147,6 @@ section {
     span {
       &::after {
         @include before(70px, 130%, auto, auto, 7%, -10%, $main-color);
-        z-index: -1;
-      }
-
-      &::before {
-        @include before(20vw, 2px, auto, auto, 7%, 0%, $main-color);
         z-index: -1;
       }
     }

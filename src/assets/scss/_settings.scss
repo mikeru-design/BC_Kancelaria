@@ -29,6 +29,7 @@ $dark-main-color: #304a4f;
 }
 @mixin center {
     display: flex;
+    flex-flow: row wrap;
     justify-content: center;
     align-items: center;
 }

@@ -39,7 +39,7 @@ export default class PopUpWindow{
   closeWindow(e){
     const popUpWindow = document.querySelector('.popUpWindow');
     const popUpWindowShadow = document.querySelector('.popUpWindowShadow');
-    if ( popUpWindow && e.target.classList.contains('popUpWindowClose')){
+    if ( popUpWindow && e.target.classList.contains('popUpWindowClose') || e.target.classList.contains('popUpWindowShadow')){
       popUpWindow.remove();
       popUpWindowShadow.remove();
       document.removeEventListener('click', this.closeWindow)

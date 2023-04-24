@@ -83,16 +83,10 @@
 
     .PrawoSpadkowe {
       background-image: url(../../../../images/PrawoSpadkowe.jpg);
-      transition-property: transform, opacity, background-size;
-      transition-duration: 1s, 1s, 1s;
-      transition-delay: .2s, .2s, 0s;
     }
 
     .PrawoCywilne {
       background-image: url(../../../../images/PrawoCywilne2.jpg);
-      transition-property: transform, opacity, background-size;
-      transition-duration: 1s, 1s, 1s;
-      transition-delay: .4s, .2s, 0s;
     }
 
     .PrawoPracy {
@@ -101,16 +95,10 @@
 
     .PrawoOswiatowe {
       background-image: url(../../../../images/PrawoOświatowe1s.jpg);
-      transition-property: transform, opacity, background-size;
-      transition-duration: 1s, 1s, 1s;
-      transition-delay: .2s, .2s, 0s;
     }
 
     .PrawoKarne {
       background-image: url(../../../../images/PrawoKarne.jpg);
-      transition-property: transform, opacity, background-size;
-      transition-duration: 1s, 1s, 1s;
-      transition-delay: .4s, .2s, 0s;
     }
 
     .PrawoAdministracyjne {
@@ -119,16 +107,10 @@
 
     .Negocjacje {
       background-image: url(../../../../images/Negocjacje.jpg);
-      transition-property: transform, opacity, background-size;
-      transition-duration: 1s, 1s, 1s;
-      transition-delay: .2s, .2s, 0s;
     }
 
     .Wspolpraca {
       background-image: url(../../../../images/Wspolpraca.jpg);
-      transition-property: transform, opacity, background-size;
-      transition-duration: 1s, 1s, 1s;
-      transition-delay: .4s, .2s, 0s;
     }
   }
 }
@@ -156,6 +138,42 @@
     .textWrapper{
       .card{
         width: 30%;
+      }
+
+      .PrawoSpadkowe {
+        transition-property: transform, opacity, background-size;
+        transition-duration: 1s, 1s, 1s;
+        transition-delay: .2s, .2s, 0s;
+      }
+
+      .PrawoCywilne {
+        transition-property: transform, opacity, background-size;
+        transition-duration: 1s, 1s, 1s;
+        transition-delay: .4s, .2s, 0s;
+      }
+
+      .PrawoOswiatowe {
+        transition-property: transform, opacity, background-size;
+        transition-duration: 1s, 1s, 1s;
+        transition-delay: .2s, .2s, 0s;
+      }
+
+      .PrawoKarne {
+        transition-property: transform, opacity, background-size;
+        transition-duration: 1s, 1s, 1s;
+        transition-delay: .4s, .2s, 0s;
+      }
+
+      .Negocjacje {
+        transition-property: transform, opacity, background-size;
+        transition-duration: 1s, 1s, 1s;
+        transition-delay: .2s, .2s, 0s;
+      }
+
+      .Wspolpraca {
+        transition-property: transform, opacity, background-size;
+        transition-duration: 1s, 1s, 1s;
+        transition-delay: .4s, .2s, 0s;
       }
     }
   }

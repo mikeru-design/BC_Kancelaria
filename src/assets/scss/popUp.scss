@@ -37,6 +37,7 @@
     color: $dark-main-color;
     font-family: "Roboto", sans-serif;
     font-size: 1.1rem;
+    line-height: 1.5rem;
   }
 
   ul{
@@ -47,11 +48,12 @@
       color: $dark-main-color;
       font-family: "Roboto", sans-serif;
       font-size: 1.1rem;
+      line-height: 1.5rem;
     }
   }
 
   .popUpWindowClose{
-    position: absolute;
+    position: fixed;
     top: 20px;
     right: 20px;
     font-weight: normal;
@@ -79,4 +81,15 @@
   z-index: 10;
 
   opacity: .8;
+}
+
+@media (width > 765px){
+  .popUpWindow{
+    width: 60vw;
+  }
+}
+@media (width > 1200px){
+  .popUpWindow{
+    width: 50vw;
+  }
 }
