@@ -10,6 +10,10 @@
     }
   }
 
+  .description {
+    display: none;
+  }
+
   .textWrapper {
     position: relative;
     display: flex;
@@ -31,32 +35,33 @@
       margin-bottom: 30px;
       border-radius: 10px;
       overflow: hidden;
-      background-size: 110% auto;
+      background-size: 120% auto;
       background-position: center;
+      background-repeat: no-repeat;
       transform: translateY(50%);
       opacity: 0;
-      transition: all .5s ease;
+      transition: all 0.5s ease;
 
-      &::before{
+      &::before {
         @include before(100%, 100%, 0, 0, auto, auto, $main-color);
-        opacity: .8;
+        opacity: 0.8;
         mix-blend-mode: multiply;
-        transition: .5s;
+        transition: 0.5s;
       }
 
-      &:hover{
-        background-size: 120%;
+      &:hover {
+        background-size: 130%;
       }
 
-      &:hover p{
+      &:hover p {
         font-size: 2.2rem;
       }
 
-      &:hover::before{
+      &:hover::before {
         opacity: 1;
       }
 
-      p{
+      p {
         width: 100%;
         color: white;
         font-family: "Cormorant Garamond";
@@ -64,16 +69,12 @@
         text-align: center;
         line-height: 120%;
         text-shadow: 0px 0px 10px $dark-main-color;
-        transition: .5s;
+        transition: 0.5s;
       }
 
-      &.showOnScroll{
+      &.showOnScroll {
         transform: translateY(0);
         opacity: 1;
-      }
-
-      .description{
-        display: none;
       }
     }
 
@@ -115,74 +116,86 @@
   }
 }
 
-@media (width > 765px){
-  #services{
+@media (width > 765px) {
+  #services {
     .heading {
       span {
-        &:after{
+        &:after {
           right: -10px;
         }
       }
     }
 
-    .textWrapper{
-      .card{
+    .textWrapper {
+      .card {
         width: 45%;
       }
     }
   }
 }
 
-@media (width > 992px){
-  #services{
-    .textWrapper{
-      .card{
+@media (width > 992px) {
+  #services {
+    .textWrapper {
+      .card {
         width: 30%;
       }
 
       .PrawoSpadkowe {
         transition-property: transform, opacity, background-size;
         transition-duration: 1s, 1s, 1s;
-        transition-delay: .2s, .2s, 0s;
+        transition-delay: 0.2s, 0.2s, 0s;
       }
 
       .PrawoCywilne {
         transition-property: transform, opacity, background-size;
         transition-duration: 1s, 1s, 1s;
-        transition-delay: .4s, .2s, 0s;
+        transition-delay: 0.4s, 0.2s, 0s;
       }
 
       .PrawoOswiatowe {
         transition-property: transform, opacity, background-size;
         transition-duration: 1s, 1s, 1s;
-        transition-delay: .2s, .2s, 0s;
+        transition-delay: 0.2s, 0.2s, 0s;
       }
 
       .PrawoKarne {
         transition-property: transform, opacity, background-size;
         transition-duration: 1s, 1s, 1s;
-        transition-delay: .4s, .2s, 0s;
+        transition-delay: 0.4s, 0.2s, 0s;
       }
 
       .Negocjacje {
         transition-property: transform, opacity, background-size;
         transition-duration: 1s, 1s, 1s;
-        transition-delay: .2s, .2s, 0s;
+        transition-delay: 0.2s, 0.2s, 0s;
       }
 
       .Wspolpraca {
         transition-property: transform, opacity, background-size;
         transition-duration: 1s, 1s, 1s;
-        transition-delay: .4s, .2s, 0s;
+        transition-delay: 0.4s, 0.2s, 0s;
       }
     }
   }
 }
 
-@media (width > 992px){
-  #services{
-    .textWrapper{
+@media (width > 992px) {
+  #services {
+    .textWrapper {
       width: 80%;
     }
+  }
+}
+
+@media (width > 1600px) {
+  #services .textWrapper{
+    width: 70%;
+  }
+}
+
+@media (width > 2000px) {
+  #services .textWrapper{
+    width: 60%;
   }
 }

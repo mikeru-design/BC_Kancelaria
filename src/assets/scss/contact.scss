@@ -21,7 +21,7 @@
     align-items: start;
     width: 100%;
     margin: 0;
-    padding: 5% 5%;
+    padding: 5%;
 
     text-align: left;
     background-color: darken($color: $dark-main-color, $amount: 10%);
@@ -264,5 +264,11 @@
         margin-top: 50px;
       }
     }
+  }
+}
+
+@media (width > 1600px) {
+  #contact .textWrapper{
+    padding-top: 20px;
   }
 }

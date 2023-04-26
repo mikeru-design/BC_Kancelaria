@@ -215,3 +215,32 @@
 
   }
 }
+
+@media (width > 1600px){
+  #team{
+    .mainWrapper{
+      @include center;
+      flex-flow: row nowrap;
+      align-items: start;
+      padding: 50px 10%;
+    }
+
+    .textWrapper{
+      min-height: 750px;
+
+      .titleName{
+        margin-top: 50px;
+        align-items: end;
+
+        h2, .surname{
+          margin: 0;
+          margin-right: 5%;
+        }
+      }
+    }
+
+    .wrapperMagda{
+      margin-top: 0;
+    }
+  }
+}

@@ -18,7 +18,6 @@ const navBar = new Navbar(document.querySelector('#navbar'));
 navBar.initAll();
 
 const popUpBtns = document.querySelectorAll('.card');
-
 popUpBtns.forEach(popUpBtn => {
   popUpBtn = new PopUpWindow(popUpBtn);
   popUpBtn.initPopUp();

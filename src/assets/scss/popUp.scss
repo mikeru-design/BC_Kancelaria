@@ -5,32 +5,33 @@
   top: 50%;
   left: 50%;
   width: 90vw;
-  max-height: 80%;
+  height: 80vh;
   padding: 100px 50px 30px;
   transform: translate(-50%, -50%);
   transform-style: preserve-3d;
-  overflow: scroll;
   z-index: 20;
 
   background-color: white;
   border-radius: 10px;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.432);
 
-  .description{
-    margin-left: 20px;
-
-    &::after {
-      @include before(15px, 100%, 0, auto, auto, -35px, $main-color);
-      z-index: 1;
-      transform: scaleY(0);
-      transform-origin: top;
-      transition: transform 2s .5s;
-    }
+  &::after {
+    @include before(5%, 80%, 14%, auto, auto, 3%, $main-color);
+    z-index: 1;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 2s .5s;
   }
 
-  &.showAfter .description::after {
+  &.showAfter::after {
     transform: scaleY(1);
   }
+  .description{
+    height: 100%;
+    overflow: scroll;
+    margin-left: 3%;
+  }
+
 
   p{
     margin-bottom: 1rem;

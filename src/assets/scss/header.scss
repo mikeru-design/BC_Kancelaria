@@ -92,15 +92,20 @@ header{
   }
 }
 
+@media (width > 1200px){
+  header{
+    .mainLogoText{
+      width: 60%;
+      bottom: 20vh;
+    }
+  }
+}
+
 @media only screen and (orientation: landscape) {
   header{
     .logoMark{
       height: 30vh;
       bottom: 35%;
     }
-    .mainLogoText{
-      // height: 18vh;
-    }
   }
-
 }

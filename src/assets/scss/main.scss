@@ -159,3 +159,13 @@ section {
     }
   }
 }
+
+@media (width > 1600px) {
+  .heading {
+    margin-bottom: 50px;
+
+    h2{
+      margin-right: 15%;
+    }
+  }
+}
